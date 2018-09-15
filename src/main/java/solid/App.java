@@ -3,6 +3,7 @@ package solid;
 import solid.Student.NullStudentException;
 import solid.Student.Score;
 import solid.Student.Student;
+import solid.Student.StudentRaportGenerator;
 
 /**
  * Hello world!
@@ -24,9 +25,9 @@ public class App
 
 
 
-        Score.generateRaport(student);
-        System.out.println("Średnia ocen: " + String.valueOf(Score.calculateAverage(student)));
-        Score.generateRaport(student2);
+        new StudentRaportGenerator().generateRaport(student);
+        System.out.println("Średnia ocen: " + String.valueOf(StudentRaportGenerator.calculateAverage(student)));
+        new StudentRaportGenerator().generateRaport(student2);
 
 
 

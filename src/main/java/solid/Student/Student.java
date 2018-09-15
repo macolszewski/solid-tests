@@ -10,7 +10,7 @@ public class Student {
     private List<Score> scores = new ArrayList<>();
 
     public Student(String name, int age, String email) throws NullStudentException {
-        if (age > 19 && EmailUtils.validateEmail(email)) {
+        if (new StudentAgeValidator().checkAge(age) && EmailUtils.validateEmail(email)) {
             this.age = age;
             this.name = name;
             this.email = email;
