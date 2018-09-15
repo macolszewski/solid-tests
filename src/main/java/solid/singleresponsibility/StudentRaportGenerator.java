@@ -1,4 +1,4 @@
-package solid.Student;
+package solid.singleresponsibility;
 
 public class StudentRaportGenerator implements RaportGenerator {
     @Override

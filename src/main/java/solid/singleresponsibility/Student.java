@@ -1,4 +1,4 @@
-package solid.Student;
+package solid.singleresponsibility;
 
 import java.util.ArrayList;
 import java.util.List;

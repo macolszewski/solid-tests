@@ -1,4 +1,4 @@
-package solid.Student;
+package solid.singleresponsibility;
 
 public class StudentAgeValidator implements AgeValidator {
     private static final int MIN_AGE = 18;
