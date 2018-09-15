@@ -13,7 +13,7 @@ public class StudentRaportGenerator implements RaportGenerator {
         }
     }
 
-    public static float calculateAverage(Student student) {
+    public float calculateAverage(Student student) {
         int n = student.getScores().size();
         float s = 0;
         if (n > 0) {
