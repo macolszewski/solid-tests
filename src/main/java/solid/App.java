@@ -1,5 +1,8 @@
 package solid;
 
+import solid.dependencyinversion.Board4x4;
+import solid.dependencyinversion.CustomBoard;
+import solid.dependencyinversion.Game;
 import solid.interfacesegregation.PlayerAPIImp;
 import solid.interfacesegregation.exercise.PizzaHutMobileApp;
 import solid.interfacesegregation.exercise.PizzaHutRestaurant;
@@ -70,22 +73,31 @@ public class App {
 //
 //        EXERCISE:
 
-        PizzaHutTakeaway pizzaHutTakeaway = new PizzaHutTakeaway();
-        pizzaHutTakeaway.takeawayPizza();
-        pizzaHutTakeaway.acceptOnlineOrder();
-        pizzaHutTakeaway.payInPerson();
-        pizzaHutTakeaway.payOnline();
-        pizzaHutTakeaway.takeTelephoneOrder();
-        pizzaHutTakeaway.walkInCustomerOrder();
+//        PizzaHutTakeaway pizzaHutTakeaway = new PizzaHutTakeaway();
+//        pizzaHutTakeaway.takeawayPizza();
+//        pizzaHutTakeaway.acceptOnlineOrder();
+//        pizzaHutTakeaway.payInPerson();
+//        pizzaHutTakeaway.payOnline();
+//        pizzaHutTakeaway.takeTelephoneOrder();
+//        pizzaHutTakeaway.walkInCustomerOrder();
+//
+//        PizzaHutMobileApp pizzaHutMobileApp = new PizzaHutMobileApp();
+//        pizzaHutMobileApp.acceptOnlineOrder();
+//        pizzaHutMobileApp.payOnline();
+//
+//        PizzaHutRestaurant pizzaHutRestaurant = new PizzaHutRestaurant();
+//        pizzaHutRestaurant.payInPerson();
+//        pizzaHutRestaurant.walkInCustomerOrder();
 
-        PizzaHutMobileApp pizzaHutMobileApp = new PizzaHutMobileApp();
-        pizzaHutMobileApp.acceptOnlineOrder();
-        pizzaHutMobileApp.payOnline();
+//        ______________________Dependency Inversion___________________
 
-        PizzaHutRestaurant pizzaHutRestaurant = new PizzaHutRestaurant();
-        pizzaHutRestaurant.payInPerson();
-        pizzaHutRestaurant.walkInCustomerOrder();
-
+        Board4x4 board4x4 = new Board4x4();
+        Game game = new Game(board4x4);
+        game.drawBoard();
+        game.setBoard(new CustomBoard(8));
+        game.drawBoard();
+        game.setBoard(new CustomBoard(3));
+        game.drawBoard();
 
     }
 }
