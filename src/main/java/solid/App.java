@@ -1,12 +1,14 @@
 package solid;
 
+import solid.liskovsubstitution.AutomaticGearCar;
+import solid.liskovsubstitution.GearType;
+import solid.liskovsubstitution.ManualGearCar;
 import solid.openclosed.Circle;
 import solid.openclosed.GraphicEditor;
 import solid.openclosed.Square;
 import solid.openclosed.Triangle;
 import solid.singleresponsibility.*;
 
-import javax.swing.*;
 
 public class App {
     public static void main(String[] args) throws EmailException, AgeException {
@@ -29,15 +31,27 @@ public class App {
 
 //        ______________________Opened / Colsed___________________
 
-        Circle circle = new Circle();
-        Square square = new Square();
-        Triangle triangle = new Triangle();
+//        Circle circle = new Circle();
+//        Square square = new Square();
+//        Triangle triangle = new Triangle();
+//
+//        GraphicEditor graphicEditor = new GraphicEditor();
+//
+//        graphicEditor.build(circle);
+//        graphicEditor.build(square);
+//        graphicEditor.build(triangle);
 
-        GraphicEditor graphicEditor = new GraphicEditor();
 
-        graphicEditor.build(circle);
-        graphicEditor.build(square);
-        graphicEditor.build(triangle);
+//        ______________________Liskov Substitution___________________
+
+
+        AutomaticGearCar automaticGearCar = new AutomaticGearCar();
+        ManualGearCar manualGearCar = new ManualGearCar();
+
+        for (GearType gearType : GearType.values()) {
+            manualGearCar.changeGear(gearType);
+            automaticGearCar.changeGear(gearType);
+        }
 
 
     }
