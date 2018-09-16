@@ -1,5 +1,6 @@
 package solid;
 
+import solid.interfacesegregation.PlayerAPIImp;
 import solid.liskovsubstitution.AutomaticGearCar;
 import solid.liskovsubstitution.GearType;
 import solid.liskovsubstitution.ManualGearCar;
@@ -8,6 +9,9 @@ import solid.openclosed.GraphicEditor;
 import solid.openclosed.Square;
 import solid.openclosed.Triangle;
 import solid.singleresponsibility.*;
+
+import javax.swing.*;
+import java.awt.*;
 
 
 public class App {
@@ -45,14 +49,21 @@ public class App {
 //        ______________________Liskov Substitution___________________
 
 
-        AutomaticGearCar automaticGearCar = new AutomaticGearCar();
-        ManualGearCar manualGearCar = new ManualGearCar();
+//        AutomaticGearCar automaticGearCar = new AutomaticGearCar();
+//        ManualGearCar manualGearCar = new ManualGearCar();
+//
+//        for (GearType gearType : GearType.values()) {
+//            manualGearCar.changeGear(gearType);
+//            automaticGearCar.changeGear(gearType);
+//        }
 
-        for (GearType gearType : GearType.values()) {
-            manualGearCar.changeGear(gearType);
-            automaticGearCar.changeGear(gearType);
-        }
 
+//        ______________________Interface Segregation___________________
+
+
+        PlayerAPIImp playerAPIImp = new PlayerAPIImp();
+        playerAPIImp.play();
+        playerAPIImp.pause();
 
     }
 }
