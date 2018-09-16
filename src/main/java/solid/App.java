@@ -93,11 +93,11 @@ public class App {
 
         Board4x4 board4x4 = new Board4x4();
         Game game = new Game(board4x4);
-        game.drawBoard();
+        game.getBoard().drawBoard();
         game.setBoard(new CustomBoard(8));
-        game.drawBoard();
+        game.getBoard().drawBoard();
         game.setBoard(new CustomBoard(3));
-        game.drawBoard();
+        game.getBoard().drawBoard();
 
     }
 }
