@@ -1,6 +1,9 @@
 package solid;
 
 import solid.interfacesegregation.PlayerAPIImp;
+import solid.interfacesegregation.exercise.PizzaHutMobileApp;
+import solid.interfacesegregation.exercise.PizzaHutRestaurant;
+import solid.interfacesegregation.exercise.PizzaHutTakeaway;
 import solid.liskovsubstitution.AutomaticGearCar;
 import solid.liskovsubstitution.GearType;
 import solid.liskovsubstitution.ManualGearCar;
@@ -61,9 +64,28 @@ public class App {
 //        ______________________Interface Segregation___________________
 
 
-        PlayerAPIImp playerAPIImp = new PlayerAPIImp();
-        playerAPIImp.play();
-        playerAPIImp.pause();
+//        PlayerAPIImp playerAPIImp = new PlayerAPIImp();
+//        playerAPIImp.play();
+//        playerAPIImp.pause();
+//
+//        EXERCISE:
+
+        PizzaHutTakeaway pizzaHutTakeaway = new PizzaHutTakeaway();
+        pizzaHutTakeaway.takeawayPizza();
+        pizzaHutTakeaway.acceptOnlineOrder();
+        pizzaHutTakeaway.payInPerson();
+        pizzaHutTakeaway.payOnline();
+        pizzaHutTakeaway.takeTelephoneOrder();
+        pizzaHutTakeaway.walkInCustomerOrder();
+
+        PizzaHutMobileApp pizzaHutMobileApp = new PizzaHutMobileApp();
+        pizzaHutMobileApp.acceptOnlineOrder();
+        pizzaHutMobileApp.payOnline();
+
+        PizzaHutRestaurant pizzaHutRestaurant = new PizzaHutRestaurant();
+        pizzaHutRestaurant.payInPerson();
+        pizzaHutRestaurant.walkInCustomerOrder();
+
 
     }
 }
